@@ -66,8 +66,6 @@ return $content . $html;
 }
 
 
-
-
 function settings(){
     add_settings_section('wcp_first_section', null, null, 'word-count-settings');
 
@@ -103,34 +101,6 @@ function sanitize_location($input) {
     return $input;
 }
 
-
-
-
-/* Html for read time field
-function readtimeHtml(){ ?>
-
-    <input type="checkbox" name="wcp_readtime" value="1"<?php checked(get_option('wcp_readtime')) ?>>
-    
-    <?php }
-
-
-
-/* Html for character count field
-function charactercountHtml(){ ?>
-
-    <input type="checkbox" name="wcp_charactercount" value="1"<?php checked(get_option('wcp_charactercount')) ?>>
-    
-    <?php }
-
-
-
-/* Html for word count field 
-function wordcountHtml(){ ?>
-
-    <input type="checkbox" name="wcp_wordcount" value="1"<?php checked(get_option('wcp_wordcount')) ?>>
-    
-    <?php }
-*/
 
 /* Reusable checkbox field */
 
@@ -179,5 +149,3 @@ submit_button();
 }
 
 $wordCountPlugin = new WordCountPlugin();
-
-
