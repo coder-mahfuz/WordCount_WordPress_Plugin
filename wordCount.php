@@ -2,8 +2,8 @@
 
 /*
 
-Plugin Name: word count
-Description: A plugin that counts words
+Plugin Name: Word Count
+Description: A plugin that counts words, characters and read time.
 Version: 1.0
 Author: Mahfuzur Rahman
 Author URI: https://github.com/coder-mahfuz
@@ -34,7 +34,7 @@ class WordCountPlugin {
 
 
 function createHtml($content){
-$html = '<h3>'. get_option('wcp_headline', 'Post Statistics') .'</h3><p>';
+$html = '<h3>'. esc_html(get_option('wcp_headline', 'Post Statistics')) .'</h3><p>';
 
 
 //get word count if word count or read time is set to yes
@@ -50,7 +50,7 @@ if (get_option('wcp_wordcount', '1')) {
 if (get_option('wcp_charactercount', '1')) {
     $html .= 'This post has ' . $characterCount . ' characters.<br>';
 }
-if (get_option('wcp_charactercount', '1')) {
+if (get_option('wcp_readtime', '1')) {
     $html .= 'This post will take about ' . round($wordCount/245) . ' minute(s) to read.<br>';
 }
 
